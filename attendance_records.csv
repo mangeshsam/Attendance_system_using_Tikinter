@@ -1,0 +1,282 @@
+id_student,name,date,time,batch,status
+1,A,,,Morning,
+2,B,,,Morning,
+3,C,,,Morning,
+4,D,,,Morning,
+1,A,2024-09-26,11:52 AM,Morning,Present
+2,B,2024-09-26,11:52 AM,Morning,Present
+3,C,2024-09-26,,Morning,Absent
+4,D,2024-09-26,,Morning,Absent
+1,A,2024-09-30,12:05 PM,Morning,Present
+2,B,2024-09-30,12:05 PM,Morning,Present
+3,C,2024-09-30,12:05 PM,Morning,Present
+4,D,2024-09-30,,Morning,Absent
+5,a,,,Afternoon,
+6,B,,,Afternoon,
+5,a,2024-09-30,12:08 PM,Afternoon,Present
+6,B,2024-09-30,,Afternoon,Absent
+1,C,,,Evening,
+2,C,,,Evening,
+1,C,2024-09-30,12:09 PM,Evening,Present
+1,A,2024-09-27,12:10 PM,Morning,Present
+2,B,2024-09-27,12:11 PM,Morning,Present
+5,a,2024-09-27,,Afternoon,Absent
+12,MANGESH,,,Evening,
+12,MANGESH,2024-09-27,12:15 PM,Evening,Present
+1,MANGESH,,,Morning,
+3,C,2024-09-27,,Morning,Absent
+4,D,2024-09-27,,Morning,Absent
+1,MANGESH,2024-09-27,,Morning,Absent
+11,RAJAT,,,Morning,
+11,RAJAT,2024-09-30,02:58 PM,Morning,Present
+16,RAJAT,,,Group Discussion,
+17,RASHMIT ,,,Group Discussion,
+16,RAJAT,2024-09-30,03:01 PM,Group Discussion,Present
+17,RASHMIT ,2024-09-30,,Group Discussion,Absent
+22,rajat,,,Group Discussion,
+22,rajat,2024-09-30,03:09 PM,Group Discussion,Present
+123,rashtra,,,Group Discussion,
+123,rashtra,2024-09-30,,Group Discussion,Absent
+1234,rastta,,,Interview,
+1234,rastta,2024-09-30,03:10 PM,Interview,Present
+12,MANGESH,2024-09-30,03:13 PM,Evening,Present
+12345,rrrr,,,Interview,
+21,addd,,,Interview,
+12345,rrrr,2024-09-30,06:43 PM,Interview,Present
+21,addd,2024-09-30,,Interview,Absent
+122222222222,axax,,,Interview,
+122222222222,axax,2024-09-30,06:55 PM,Interview,Present
+12,MANGESH,2024-10-01,02:48 PM,Evening,Present
+17,RASHMIT ,2024-10-01,02:50 PM,Group Discussion,Present
+22,rajat,2024-10-01,,Group Discussion,Absent
+123,rashtra,2024-10-01,,Group Discussion,Absent
+5,a,2024-10-01,02:58 PM,Afternoon,Present
+1234,rastta,2024-10-01,03:07 PM,Interview,Present
+12345,rrrr,2024-10-01,03:07 PM,Interview,Present
+21,addd,2024-10-01,,Interview,Absent
+122222222222,axax,2024-10-01,,Interview,Absent
+1,A,2024-10-01,03:15 PM,Morning,Present
+2,B,2024-10-01,03:15 PM,Morning,Present
+11,RAJAT,2024-10-01,03:15 PM,Morning,Present
+3,C,2024-10-01,,Morning,Absent
+4,D,2024-10-01,,Morning,Absent
+1,A,2024-10-02,11:56 AM,Morning,Present
+2,B,2024-10-02,11:56 AM,Morning,Present
+3,C,2024-10-02,,Morning,Absent
+4,D,2024-10-02,,Morning,Absent
+11,RAJAT,2024-10-02,,Morning,Absent
+17,RASHMIT ,2024-10-02,11:57 AM,Group Discussion,Present
+22,rajat,2024-10-02,11:57 AM,Group Discussion,Present
+123,rashtra,2024-10-02,,Group Discussion,Absent
+5,a,2024-10-02,,Afternoon,Absent
+1234,rastta,2024-10-02,,Interview,Absent
+12345,rrrr,2024-10-02,,Interview,Absent
+21,addd,2024-10-02,,Interview,Absent
+122222222222,axax,2024-10-02,,Interview,Absent
+123212,mangesh sambare,,,Interview,
+123212,mangesh sambare,2024-10-02,04:06 PM,Interview,Present
+909,rajajajajaj,,,Morning,
+909,rajajajajaj,2024-10-02,04:09 PM,Morning,Present
+909,rajajajajaj,2024-10-03,09:10 AM,Morning,Present
+2,B,2024-10-03,09:10 AM,Morning,Present
+1,A,2024-10-03,09:10 AM,Morning,Present
+3,C,2024-10-03,,Morning,Absent
+4,D,2024-10-03,,Morning,Absent
+11,RAJAT,2024-10-03,,Morning,Absent
+2222222,rajuoinher,,,Morning,
+2222222,rajuoinher,2024-10-03,10:52 AM,Morning,Present
+5,a,2024-10-03,12:21 PM,Afternoon,Present
+12,MANGESH,2024-10-03,12:27 PM,Evening,Present
+1234,rastta,2024-10-03,12:30 PM,Interview,Present
+12345,rrrr,2024-10-03,,Interview,Absent
+21,addd,2024-10-03,,Interview,Absent
+122222222222,axax,2024-10-03,12:36 PM,Interview,Present
+123212,mangesh sambare,2024-10-03,,Interview,Absent
+17,RASHMIT ,2024-10-03,12:42 PM,Group Discussion,Present
+9876,RAJAJAJAJAJJAJRT,,,Group Discussion,
+9876,RAJAJAJAJAJJAJRT,2024-10-03,12:42 PM,Group Discussion,Present
+812,CCDXX,,,Interview,
+812,CCDXX,2024-10-03,12:49 PM,Interview,Present
+22,rajat,2024-10-03,12:54 PM,Group Discussion,Present
+999999,rahar,,,Group Discussion,
+999999,rahar,2024-10-03,12:55 PM,Group Discussion,Present
+123,rashtra,2024-10-03,,Group Discussion,Absent
+67676,hgh,,,Evening,
+67676,hgh,2024-10-03,12:58 PM,Evening,Present
+5656,tyt,,,Evening,
+5654,tyt,,,Evening,
+5656,tyt,2024-10-03,,Evening,Absent
+232323,1112,,,Morning,
+232323,1112,2024-10-03,01:05 PM,Morning,Present
+476474674647,645645,,,Morning,
+476474674647,645645,2024-10-03,01:49 PM,Morning,Present
+9900009,raerer,,,Morning,
+9900009,raerer,2024-10-03,01:50 PM,Morning,Present
+19198,rerjt,,,Group Discussion,
+19198,rerjt,2024-10-03,01:52 PM,Group Discussion,Present
+7465767,75647,,,Afternoon,
+7465767,75647,2024-10-03,01:53 PM,Afternoon,Present
+943,raer,,,Interview,
+943,raer,2024-10-03,02:02 PM,Interview,Present
+4545423,erded,,,Afternoon,
+4545423,erded,2024-10-03,02:04 PM,Afternoon,Present
+77877,fytfu,,,Morning,
+77877,fytfu,2024-10-03,09:13 PM,Morning,Present
+65675,gug,,,Morning,
+65675,gug,2024-10-03,09:13 PM,Morning,Present
+2348,agd,,,Group Discussion,
+2348,agd,2024-10-03,09:35 PM,Group Discussion,Present
+1,A,2024-09-03,,Morning,Absent
+2,B,2024-09-03,,Morning,Absent
+3,C,2024-09-03,,Morning,Absent
+4,D,2024-09-03,,Morning,Absent
+11,RAJAT,2024-09-03,,Morning,Absent
+909,rajajajajaj,2024-09-03,,Morning,Absent
+2222222,rajuoinher,2024-09-03,,Morning,Absent
+232323,1112,2024-09-03,,Morning,Absent
+476474674647,645645,2024-09-03,,Morning,Absent
+9900009,raerer,2024-09-03,,Morning,Absent
+77877,fytfu,2024-09-03,,Morning,Absent
+65675,gug,2024-09-03,,Morning,Absent
+7465767,75647,2024-09-03,09:45 PM,Afternoon,Present
+5,a,2024-09-03,,Afternoon,Absent
+4545423,erded,2024-09-03,,Afternoon,Absent
+12,MANGESH,2024-09-03,09:54 PM,Evening,Present
+1234,rastta,2024-09-03,09:55 PM,Interview,Present
+12345,rrrr,2024-09-03,09:55 PM,Interview,Present
+21,addd,2024-09-03,,Interview,Absent
+122222222222,axax,2024-09-03,,Interview,Absent
+123212,mangesh sambare,2024-09-03,,Interview,Absent
+812,CCDXX,2024-09-03,,Interview,Absent
+943,raer,2024-09-03,,Interview,Absent
+67676,hgh,2024-09-03,09:58 PM,Evening,Present
+5656,tyt,2024-09-03,,Evening,Absent
+17,RASHMIT ,2024-09-03,10:06 PM,Group Discussion,Present
+22,rajat,2024-09-03,10:06 PM,Group Discussion,Present
+123,rashtra,2024-09-03,10:06 PM,Group Discussion,Present
+9876,RAJAJAJAJAJJAJRT,2024-09-03,10:07 PM,Group Discussion,Present
+999999,rahar,2024-09-03,,Group Discussion,Absent
+19198,rerjt,2024-09-03,,Group Discussion,Absent
+2348,agd,2024-09-03,,Group Discussion,Absent
+1,A,2024-09-04,10:14 PM,Morning,Present
+2,B,2024-09-04,10:14 PM,Morning,Present
+3,C,2024-09-04,10:14 PM,Morning,Present
+4,D,2024-09-04,10:14 PM,Morning,Present
+11,RAJAT,2024-09-04,10:14 PM,Morning,Present
+909,rajajajajaj,2024-09-04,,Morning,Absent
+2222222,rajuoinher,2024-09-04,,Morning,Absent
+232323,1112,2024-09-04,,Morning,Absent
+476474674647,645645,2024-09-04,,Morning,Absent
+9900009,raerer,2024-09-04,,Morning,Absent
+77877,fytfu,2024-09-04,,Morning,Absent
+65675,gug,2024-09-04,,Morning,Absent
+7676767,7676767,,,Interview,
+7676767,7676767,2024-10-03,,Interview,Absent
+676768888,767676767676,,,Afternoon,
+676768888,767676767676,2024-10-03,11:44 PM,Afternoon,Present
+2,B,2024-10-04,12:03 AM,Morning,Present
+3,C,2024-10-04,12:04 AM,Morning,Present
+4,D,2024-10-04,12:04 AM,Morning,Present
+1,A,2024-10-04,,Morning,Absent
+11,RAJAT,2024-10-04,,Morning,Absent
+909,rajajajajaj,2024-10-04,,Morning,Absent
+2222222,rajuoinher,2024-10-04,,Morning,Absent
+232323,1112,2024-10-04,,Morning,Absent
+476474674647,645645,2024-10-04,,Morning,Absent
+9900009,raerer,2024-10-04,,Morning,Absent
+77877,fytfu,2024-10-04,,Morning,Absent
+65675,gug,2024-10-04,,Morning,Absent
+1234,rastta,2024-10-04,12:06 AM,Interview,Present
+12345,rrrr,2024-10-04,12:18 AM,Interview,Present
+21,addd,2024-10-04,,Interview,Absent
+122222222222,axax,2024-10-04,,Interview,Absent
+123212,mangesh sambare,2024-10-04,,Interview,Absent
+812,CCDXX,2024-10-04,,Interview,Absent
+943,raer,2024-10-04,,Interview,Absent
+7676767,7676767,2024-10-04,,Interview,Absent
+67676,hgh,2024-10-04,12:19 AM,Evening,Present
+7738839939,mangesh,,,Evening,
+12,MANGESH,2024-10-04,,Evening,Absent
+5656,tyt,2024-10-04,,Evening,Absent
+7738839939,mangesh,2024-10-04,,Evening,Absent
+9098089,jjd,,,Evening,
+9098089,jjd,2024-10-04,12:28 AM,Evening,Present
+17,RASHMIT ,2024-10-04,12:29 AM,Group Discussion,Present
+8473947,83749,,,Group Discussion,
+8473947,83749,2024-10-04,12:30 AM,Group Discussion,Present
+22,rajat,2024-10-04,,Group Discussion,Absent
+123,rashtra,2024-10-04,,Group Discussion,Absent
+9876,RAJAJAJAJAJJAJRT,2024-10-04,,Group Discussion,Absent
+999999,rahar,2024-10-04,,Group Discussion,Absent
+19198,rerjt,2024-10-04,,Group Discussion,Absent
+2348,agd,2024-10-04,,Group Discussion,Absent
+4171,raja bau,,,Afternoon,
+4085,jfeo,,,Afternoon,
+4171,raja bau,2024-10-04,12:31 AM,Afternoon,Present
+5,a,2024-10-04,,Afternoon,Absent
+7465767,75647,2024-10-04,,Afternoon,Absent
+4545423,erded,2024-10-04,,Afternoon,Absent
+676768888,767676767676,2024-10-04,,Afternoon,Absent
+4085,jfeo,2024-10-04,,Afternoon,Absent
+4938,alnvla,,,Afternoon,
+3283,afj;a,,,Afternoon,
+4938,alnvla,2024-10-04,12:39 AM,Afternoon,Present
+3283,afj;a,2024-10-04,,Afternoon,Absent
+2394,FM OE,,,Interview,
+7890,ELFJ,,,Interview,
+2394,FM OE,2024-10-04,00:43 51,Interview,Present
+7890,ELFJ,2024-10-04,,Interview,Absent
+7465767,75647,2024-08-04,12:45 AM,Afternoon,Present
+3283,afj;a,2024-08-04,12:45 AM,Afternoon,Present
+5,a,2024-08-04,,Afternoon,Absent
+4545423,erded,2024-08-04,,Afternoon,Absent
+676768888,767676767676,2024-08-04,,Afternoon,Absent
+4171,raja bau,2024-08-04,,Afternoon,Absent
+4085,jfeo,2024-08-04,,Afternoon,Absent
+4938,alnvla,2024-08-04,,Afternoon,Absent
+4938,alnvla,2024-07-06,12:53 AM,Afternoon,Present
+5,a,2024-07-06,,Afternoon,Absent
+7465767,75647,2024-07-06,,Afternoon,Absent
+4545423,erded,2024-07-06,,Afternoon,Absent
+676768888,767676767676,2024-07-06,,Afternoon,Absent
+4171,raja bau,2024-07-06,,Afternoon,Absent
+4085,jfeo,2024-07-06,,Afternoon,Absent
+3283,afj;a,2024-07-06,,Afternoon,Absent
+1,A,2024-08-07,07:34 AM,Morning,Present
+232323,1112,2024-08-07,07:34 AM,Morning,Present
+476474674647,645645,2024-08-07,07:34 AM,Morning,Present
+9900009,raerer,2024-08-07,07:34 AM,Morning,Present
+77877,fytfu,2024-08-07,07:35 AM,Morning,Present
+65675,gug,2024-08-07,07:35 AM,Morning,Present
+2,B,2024-08-07,,Morning,Absent
+3,C,2024-08-07,,Morning,Absent
+4,D,2024-08-07,,Morning,Absent
+11,RAJAT,2024-08-07,,Morning,Absent
+909,rajajajajaj,2024-08-07,,Morning,Absent
+2222222,rajuoinher,2024-08-07,,Morning,Absent
+943,raer,2024-08-07,07:35 AM,Interview,Present
+2394,FM OE,2024-08-07,07:37 AM,Interview,Present
+1234,rastta,2024-08-07,,Interview,Absent
+12345,rrrr,2024-08-07,,Interview,Absent
+21,addd,2024-08-07,,Interview,Absent
+122222222222,axax,2024-08-07,,Interview,Absent
+123212,mangesh sambare,2024-08-07,,Interview,Absent
+812,CCDXX,2024-08-07,,Interview,Absent
+7676767,7676767,2024-08-07,,Interview,Absent
+7890,ELFJ,2024-08-07,,Interview,Absent
+2348,agd,2024-06-04,07:56:43,Group Discussion,Present
+17,RASHMIT ,2024-06-04,07:56:49,Group Discussion,Absent
+22,rajat,2024-06-04,07:56:49,Group Discussion,Absent
+123,rashtra,2024-06-04,07:56:49,Group Discussion,Absent
+9876,RAJAJAJAJAJJAJRT,2024-06-04,07:56:49,Group Discussion,Absent
+999999,rahar,2024-06-04,07:56:49,Group Discussion,Absent
+19198,rerjt,2024-06-04,07:56:49,Group Discussion,Absent
+8473947,83749,2024-06-04,07:56:49,Group Discussion,Absent
+4085,jfeo,2024-06-04,07:57:43,Afternoon,Present
+5,a,2024-06-04,07:57:54,Afternoon,Absent
+7465767,75647,2024-06-04,07:57:54,Afternoon,Absent
+4545423,erded,2024-06-04,07:57:54,Afternoon,Absent
+676768888,767676767676,2024-06-04,07:57:54,Afternoon,Absent
+4171,raja bau,2024-06-04,07:57:54,Afternoon,Absent
+4938,alnvla,2024-06-04,07:57:54,Afternoon,Absent
+3283,afj;a,2024-06-04,07:57:54,Afternoon,Absent

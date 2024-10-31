@@ -1,9 +1,14 @@
 import tkinter as tk
-from tkinter import messagebox, simpledialog, ttk
+from tkinter import messagebox, simpledialog, ttk,filedialog
 from datetime import datetime
 import os
 import csv
 import psycopg2
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
 
 hostname = 'localhost'
 database = "postgres"
@@ -92,7 +97,7 @@ def get_db_connection():
         return connection
     except Exception as e:
         print(f"An error occurred while connecting to the database: {e}")
-        return None
+    return connection
     
 def student_exists(student_id):
     """Check if the student exists in the students table."""
@@ -543,6 +548,167 @@ def change_batch(selected_batch):
     batch_var.set(selected_batch)
     open_student_list_window(selected_batch)
 
+
+
+# Email configuration
+EMAIL_ADDRESS = "sambaremangesh123@gmail.com"
+EMAIL_PASSWORD = "lxzbotbdkncgddli"
+SMTP_SERVER = "smtp.gmail.com"
+SMTP_PORT = 587
+
+def get_all_students():
+    """Retrieve the list of all students with email addresses from PostgreSQL."""
+    connection = None
+    cursor = None
+    try:
+        connection = get_db_connection()
+        cursor = connection.cursor()
+        query = "SELECT id_student, name, email_id FROM students"
+        cursor.execute(query)
+        students = cursor.fetchall()
+        return students
+    except (Exception, psycopg2.DatabaseError) as error:
+        print("Error retrieving students:", error)
+        return []
+    finally:
+        if cursor is not None:
+            cursor.close()
+        
+
+
+def send_email(to_email, subject, body, attachments):
+    """Send an email to a specified email address with optional attachments."""
+    msg = MIMEMultipart()
+    msg['From'] = EMAIL_ADDRESS
+    msg['To'] = to_email
+    msg['Subject'] = subject
+    msg.attach(MIMEText(body, 'plain'))
+
+    # Attach files to the email
+    for file_path in attachments:
+        try:
+            with open(file_path, "rb") as f:
+                part = MIMEBase("application", "octet-stream")
+                part.set_payload(f.read())
+            encoders.encode_base64(part)
+            part.add_header("Content-Disposition", f"attachment; filename={file_path.split('/')[-1]}")
+            msg.attach(part)
+        except Exception as e:
+            print(f"Failed to attach file {file_path}: {e}")
+
+    try:
+        server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+        server.starttls()
+        server.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
+        server.send_message(msg)
+        print(f"Email sent successfully to {to_email}")
+    except Exception as e:
+        print("Failed to send email:", e)
+    finally:
+        server.quit()
+
+def send_bulk_email(selected_emails, subject, body, attachments):
+    """Send an email to all selected email addresses with optional attachments."""
+    for email in selected_emails:
+        send_email(email, subject, body, attachments)
+
+def open_student_list():
+    global student_window  # Declare student_window as global at the start
+    """Open a new window with a list of students, checkboxes for email selection, and fields for email subject, body, and file attachment."""
+
+    if 'student_window' in globals() and student_window.winfo_exists():
+        student_window.destroy()  # Close any existing window before opening a new one
+    
+    root.withdraw()  # Hide the main window
+
+    student_window = tk.Toplevel(root)  # Define student_window as a Toplevel window
+    student_window.title("Select Students to Email")
+    student_window.configure(bg='#ffffb3')  # Set background color for the window
+
+    # Define behavior for when the student window is closed
+    def on_student_window_close():
+        student_window.destroy()
+        root.deiconify()  # Show the main window again
+
+    # Set the close event to call on_student_window_close
+    student_window.protocol("WM_DELETE_WINDOW", on_student_window_close)
+
+    # Create a frame for the student list on the left side
+    student_frame = tk.Frame(student_window, bg='#ffffb3')
+    student_frame.grid(row=0, column=0, padx=10, pady=10, sticky="nw")
+
+    # Fetch students and create checkboxes
+    students = get_all_students()  # Fetch the current list of students
+    checkboxes = []
+    
+    # Add column headers
+    tk.Label(student_frame, text="Name", font=("Times New Roman", 15), width=20, anchor="w", fg='purple', bg='#ffffb3').grid(row=0, column=0, padx=5, sticky="w")
+    tk.Label(student_frame, text="Email ID", font=("Times New Roman", 15), width=20, anchor="w", fg='purple', bg='#ffffb3').grid(row=0, column=1, padx=5, sticky="w")
+    
+    # Display each student with a checkbox, name, and email in separate columns
+    for i, (student_id, name, email) in enumerate(students, start=1):
+        var = tk.BooleanVar()
+        chk = tk.Checkbutton(student_frame, variable=var, bg='#ffffb3')
+        chk.grid(row=i, column=2, padx=5, sticky="w")
+        tk.Label(student_frame, text=name, font=("Times New Roman", 15), width=20, anchor="w", fg='purple', bg='#ffffb3').grid(row=i, column=0, padx=5, sticky="w")
+        tk.Label(student_frame, text=email, font=("Times New Roman", 15), width=20, anchor="w", fg='purple', bg='#ffffb3').grid(row=i, column=1, padx=5, sticky="w")
+        checkboxes.append((chk, var, email))
+
+    # Create a frame for the email subject, body, and attachments on the right side
+    email_frame = tk.Frame(student_window, bg='#ffffb3')
+    email_frame.grid(row=0, column=1, padx=10, pady=10, sticky="ne")
+    
+    # Subject Entry on the right side
+    tk.Label(email_frame, text="Subject:", font=("Times New Roman", 15), fg='purple', bg='#ffffb3').grid(row=0, column=0, sticky='w')
+    subject_entry = tk.Entry(email_frame, width=50, font=("Times New Roman", 15))
+    subject_entry.grid(row=0, column=1, padx=10, pady=5)
+    
+    # Body Text on the right side
+    tk.Label(email_frame, text="Body:", font=("Times New Roman", 15), fg='purple', bg='#ffffb3').grid(row=1, column=0, sticky='nw')
+    body_text = tk.Text(email_frame, width=50, height=10, font=("Times New Roman", 15))
+    body_text.grid(row=1, column=1, padx=10, pady=5)
+
+    # Attachments section
+    # Fetch students and create checkboxes
+    students = get_all_students()  # Fetch the current list of students
+    attachments = []
+
+    def browse_files():
+        """Function to browse and add files to the attachments list."""
+        files = filedialog.askopenfilenames(title="Select files")
+        for file in files:
+            attachments.append(file)
+            file_label = tk.Label(email_frame, text=file.split("/")[-1], font=("Times New Roman", 12), fg="blue", bg='#ffffb3', anchor="w")
+            file_label.grid(sticky="w", padx=10, pady=2, row=len(attachments) + 2, column=1)
+
+    # Browse button to select files
+    browse_button = tk.Button(email_frame, text="Attach Files", command=browse_files, font=("Times New Roman", 15), width=15, bg='purple', fg='white')
+    browse_button.grid(row=2, column=1, sticky="w", pady=5)
+
+    # Function to handle sending emails
+    def send_selected_emails():
+        selected_emails = [email for chk, var, email in checkboxes if var.get()]
+        subject = subject_entry.get()
+        body = body_text.get("1.0", tk.END)
+        
+        if not selected_emails:
+            messagebox.showinfo("No Selection", "No students selected for email.")
+            return
+        if not subject or not body.strip():
+            messagebox.showwarning("Missing Information", "Please enter both subject and body for the email.")
+            return
+
+        # Send emails
+        send_bulk_email(selected_emails, subject, body, attachments)
+        messagebox.showinfo("Email Sent", "Emails sent to selected students.")
+        
+        # Close the student window and show the main window again
+        on_student_window_close()
+
+    # Send email button centered under the email frame
+    send_button = tk.Button(student_window, text="Send Email", command=send_selected_emails, font=("Times New Roman", 15), width=15, bg='purple', fg='white')
+    send_button.grid(row=1, column=0, columnspan=2, pady=10)
+
 def on_close_main_window():
     """Function to close the entire program when the main window is closed."""
     if messagebox.askokcancel("Quit", "Do you want to quit?"):
@@ -560,8 +726,8 @@ def on_closing():
         connection.close()  # Close the database connection
     root.destroy()
 
-
 # Tkinter application
+
 root = tk.Tk()
 root.title("Student Attendance System (Affordable.Ai)")
 root.geometry("600x800")
@@ -597,6 +763,9 @@ interview_button.pack(padx=10, pady=14)
 
 group_discussion_button = tk.Button(button_frame, text="Group Discussion Batch", command=lambda: change_batch("Group Discussion"), font=("Times New Roman", 16) ,width=20, height=1, fg='white', bg='purple')
 group_discussion_button.pack(padx=10, pady=14)
+
+send_email_button = tk.Button(button_frame, text="Send Email", command=open_student_list,font=("Times New Roman", 16) ,width=20, height=1, fg='white', bg='purple')
+send_email_button.pack(padx=10, pady=14)
 
 frame = tk.Frame(root, bg="purple")
 frame.pack(pady=10)
